@@ -81,9 +81,7 @@ function draw(userChoice,computerChoice){
 }
 
 
-
-
-
+main()
 
 
 
