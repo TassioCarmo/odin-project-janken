@@ -1,3 +1,103 @@
+/*Imoport font-family from https: //fonts.google.com*/
+@import url('https://fonts.googleapis.com/css2?family=Asap:wght@500;700&display=swap');
+
+/*Universal Selector*/
+*{
+    margin: 0;
+    padding: 0;
+    /* Border-box tells the browser to account for any border and padding in the values you specify for an element's width and height.*/
+    box-sizing: border-box;
+    font-family: Asap, sans-serif;
+}
+
+header{
+    background-color: white;
+    padding:20px}
+
+header > h1{
+    color: rgb(44, 44, 52);
+    text-align: center;
+}
+
 body{
-    background-color: red;
+    background-color: rgb(44, 44, 52);
+}
+
+.score-board{
+    /*margin 20px top and bottom and center it*/
+    margin: 20px auto;
+    border: 3px solid white;
+    
+    /*border-radius rounds the edges*/
+    border-radius:4px;
+    width: 200px;
+    font-size: 46px;
+    text-align: center;
+    padding: 15px 20px;
+    /*In order to propely position the user and computer label it has to have something other than inherent or static*/
+    position: relative;
+}
+
+.badge{
+    background: #E25840;
+    font-size: 14px;
+    padding: 4px 10px;
+
+
+    
+}
+
+#user-label{
+    /*The element is removed from the normal document flow, and no space is created for the element in the page layout. It is positioned relative to its closest positioned ancestor, if any; otherwise, it is placed relative to the initial containing block. Its final position is determined by the values of top, right, bottom, and left.*/
+    position: absolute;
+    top : 30px;
+    left : -25px;
+}
+
+#computer-label {
+    position: absolute;
+    top: 30px;
+    right: -30px;
+}
+
+.result{
+    font-size:40px;
+}
+
+.result > p {
+    text-align: center;
+    font-weight: bold;
+}
+
+.choices{
+    margin-top: 50px;
+    text-align: center;
+    
+}
+
+.choice{
+    /*makes it horizontal*/
+    border: 4px solid rgb(44, 44, 52);
+    /*make it a circle regardless of the size*/
+    border-radius: 50%;
+    margin: 0 20px;
+    padding: 2px;
+    display: inline-block;
+    transition:  all 0.3s ease;
+}
+
+.choice:hover{
+    cursor: pointer;
+    border: 4px solid blue;
+}
+
+#action-message{
+    text-align: center;
+    margin-top: 20px;
+    font-weight: bold;
+    font-size: 28px;
+}
+
+.result, #action-message, .badge , .score-board{
+    color: white;
 }
