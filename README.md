@@ -2,7 +2,7 @@
 ## Jogo de jokenpo usando conceitos basicos de HTML/CSS/Javascript
 
 
-# what knew did i learn
+# what new did i learn
 
 - ES6
 - DOM manipulation
