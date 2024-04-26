@@ -28,7 +28,7 @@ function main(){
 }
 
 
-
+// Function to determine the outcome of the game
 function game(userChoice){
     const computerChoice = getComputerChoice();
 
@@ -46,35 +46,49 @@ function game(userChoice){
 
 }
 
+// Function to get computer's random choice for the game
 function getComputerChoice(){
+    // Array of possible choices
     const possibilities = ["Rock","Paper","Scissors"];
+    // Generate a random index
     const randomIndex = Math.floor(Math.random() * 3);
+    // Return the choice corresponding to the random index
     return possibilities[randomIndex];
 }
 
 function win(userChoice,computerChoice){
+    // Function to handle Win
+    // Increment User score
     userScore++;
     // innerHTML changes the html of this specific tag/id/class
+    // Update score display
     userScore_span.innerHTML = userScore;
-    // E5
-    /*result_div.innerHTML = userChoice + " Beats " + computerChoice + ", You win";*/
-    // E6 cocataneate a string
+    // E6 concatenate string
+    // Display result message
     result_div.innerHTML = `Player's ${userChoice} beats Computer's ${computerChoice} , You win!`;
 }
 
+// Function to handle Lost
 function lost(userChoice,computerChoice){
+    // Increment PC scores
     computerScore++;
+    // Update score display
     computerScore_span.innerHTML = computerScore;
+    // Display result message
     result_div.innerHTML = `Player's ${userChoice} loses Computer's ${computerChoice} , You lose!`;
 
 
 }
 
+// Function to handle draw
 function draw(userChoice,computerChoice){
+    // Increment both scores
     userScore++;
     computerScore++;
+    // Update scores display
     userScore_span.innerHTML = userScore;
     computerScore_span.innerHTML = computerScore;
+    // Display result message
     result_div.innerHTML = `Player's ${userChoice} equals Computer's ${computerChoice} , it's a draw!`;
 
 
